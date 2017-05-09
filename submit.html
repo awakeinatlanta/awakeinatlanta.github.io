@@ -32,30 +32,21 @@
   <input type="text" name="addressname">
   <br><br>
   <div>
-    <a href="success.html"><input type="submit" name ="submit" value="submit"></a></div>
-  <?php
-    if(isset($_POST['submit']))
+  <a href="success.html"><input type="submit" name ="button_pressed"value="Submit"></a></div>
+    <?php
+    if(isset($_POST['button_pressed']))
     {
-         $to = "lisna.vargheese@gmail.com";
-         $subject = "AwakeInAtlanta Sumbmission";
-         
-         $message = "<b>This is HTML message.</b>";
-         $message .= "<h1>This is headline.</h1>";
-         
-         $header = "From:lisna.vargheese@gmail.com \r\n";
-         $header .= "Cc:lvargheese3@gatech.edu \r\n";
-         $header .= "MIME-Version: 1.0\r\n";
-         $header .= "Content-type: text/html\r\n";
-         
-         $retval = mail ($to,$subject,$message,$header);
-         
-         if( $retval == true ) {
-            echo "Message sent successfully...";
-         }else {
-            echo "Message could not be sent...";
-         }
+    $to      = 'lisna.vargheese@gmail.com';
+    $subject = 'Submission from AwakeInAtlanta';
+    $message = 'hello';
+    $headers = 'From: webmaster@example.com' . "\r\n" .
+    'Reply-To: webmaster@example.com' . "\r\n" .
+    'X-Mailer: PHP/' . phpversion();
+
+    mail($to, $subject, $message, $headers);
+    }
     ?> 
     </center></div>
-    </div>   
+    </div>    
 </div>
 </body>
