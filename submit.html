@@ -32,9 +32,9 @@
   <input type="text" name="addressname">
   <br><br>
   <div>
-    <a href="success.html"><input type="submit" name ="button_pressed"value="Submit"></a></div>
+    <a href="success.html"><input type="submit" name ="submit" value="Submit"></a></div>
     <?php
-    if(isset($_POST['button_pressed']))
+    if(isset($_POST['submit']))
     {
     $to      = 'lisna.vargheese@gmail.com';
     $subject = 'Submission from AwakeInAtlanta';
@@ -44,6 +44,14 @@
     'X-Mailer: PHP/' . phpversion();
 
     mail($to, $subject, $message, $headers);
+    if(mail($to, $subject, $message, $headers)) {
+
+   	echo 'Mail successfully sent';
+
+    } else {
+
+    	echo 'Mail failed to send';
+
     }
     ?> 
     </center></div>
