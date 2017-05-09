@@ -34,10 +34,26 @@
   <a href="success.html"><input type="submit" name ="button_pressed" value="Submit">
     <?php
     if(isset($_POST['button_pressed'])) {
- 	$to = "lisna.vargheese@gmail.com";
- 	$subject = "Hi!";
- 	$body = "Hi,\n\nHow are you?";
- 	mail($to, $subject, $body);
+   	/* Setup your Subject and Message Body */ 
+   	$subject='Testing php Email'; 
+	$body=' Put Your Text Message Here.'; 
+
+  	/* Specify your SMTP Server, Port and Valid From Address */ 
+  	ini_set("SMTP","lisna.vargheese@gmail.com"); 
+  	ini_set("smtp_port","25"); 
+  	ini_set("sendmail_from","lisna.vargheese@gmail.com"); 
+ 
+  	$headers = "Cc:Real CC Name <cclisna.vargheese@gmail.com>\r\n"; 
+  	$headers .= "Bcc:Real BCC Name <bcclisna.vargheese@gmail.com>\r\n"; 
+
+ 	 /* Try to send message and respond if it sends or fails. */ 
+ 	if(mail ('Lisna V <lisna.vargheese@gmail.com>', $subject, $body, $headers )){ 
+     	echo "<h2>Your Message was sent!</h2>"; 
+ 	} 
+	else { 
+     	echo "<font color='red'><h2>Your Message Was Not Sent!</h2></font>"; 
+	} 
+	exit; 
     }
     ?> </a>
     </center></div>
