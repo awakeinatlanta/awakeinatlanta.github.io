@@ -31,20 +31,17 @@
   Address:<br>
   <input type="text" name="addressname">
   <br><br>
-  <div>
-  <a href="success.html"><input type="submit" name ="button_pressed"value="Submit"></a></div>
+  <a href="success.html"><input type="submit" name ="button_pressed" value="Submit"></a>
     <?php
-    if(isset($_POST['button_pressed']))
-    {
-    $to      = 'lisna.vargheese@gmail.com';
-    $subject = 'Submission from AwakeInAtlanta';
-    $message = 'hello';
-    $headers = 'From: webmaster@example.com' . "\r\n" .
-    'Reply-To: webmaster@example.com' . "\r\n" .
-    'X-Mailer: PHP/' . phpversion();
-
-    mail($to, $subject, $message, $headers);
-    }
+    if(isset($_POST['button_pressed'])) {
+ 	$to = "lisna.vargheese@gmail.com";
+ 	$subject = "Hi!";
+ 	$body = "Hi,\n\nHow are you?";
+ 	if (mail($to, $subject, $body)) {
+   		echo("<p>Email successfully sent!</p>");
+  	} else {
+   		echo("<p>Email delivery failed…</p>");
+  	}
     ?> 
     </center></div>
     </div>    
