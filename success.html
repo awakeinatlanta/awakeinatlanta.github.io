@@ -24,29 +24,10 @@
     </div>
     <div class = "row">
         <div class="col-sm-4"></div>
-        <div class="col-sm-4"><center>
-  Coffee Place Name:<br>
-  <input type="text" name="coffeename">
-  <br>
-  Address:<br>
-  <input type="text" name="addressname">
-  <br><br>
-  <div>
-    <a href="success.html"><input type="submit" name ="button_pressed"value="Submit"></a></div>
-    <?php
-    if(isset($_POST['button_pressed']))
-    {
-    $to      = 'lisna.vargheese@gmail.com';
-    $subject = 'Submission from AwakeInAtlanta';
-    $message = 'hello';
-    $headers = 'From: webmaster@example.com' . "\r\n" .
-    'Reply-To: webmaster@example.com' . "\r\n" .
-    'X-Mailer: PHP/' . phpversion();
-
-    mail($to, $subject, $message, $headers);
-    }
-    ?> 
-    </center></div>
-    </div>   
+        <div class="col-sm-4"><center> Thank You!</center></div>
+    </div>  
+    <br></br> 
+    <div>
+    <center><a href="index.html"><input type="submit" value="Home Page"></a></div></center>
 </div>
 </body>
