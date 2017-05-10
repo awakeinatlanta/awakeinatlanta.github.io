@@ -1,3 +1,10 @@
+<?php
+    if($_POST["message"]) {
+    mail("lisna.vargheese@gmail.com", "Form to email message", $_POST["message"], "From: lisna.vargheese@gmail.com");
+    }
+?>
+<!DOCTYPE html>
+<html>
 <head>
 <title>Awake In Atlanta</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -7,56 +14,29 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
 <body>
 <div class="container">
-	   <center><a href="index.html"><h1><img src="titlePic.png" width="786" height="70"></h1>
+	   <center><a href="index.html"><h1><img src="titlePic.png" width="786" height="70"></h1></center>
         <style>
         h1 {
             padding-top: 20px;
             padding-bottom: 110px;
         }
-    </style></a></center>
+    </style></a>
 	<div class = "row">
 		<div class="col-sm-4"></div>
         <div class="col-sm-4"></div>
         <div class="col-sm-4"></div>
     </div>
+
     <div class = "row">
-        <div class="col-sm-4"></div>
-        <div class="col-sm-4"><center>
-  Coffee Place Name:<br>
-  <input type="text" name="coffeename">
-  <br>
-  Address:<br>
-  <input type="text" name="addressname">
-  <br><br>
-  <a href="success.html"><input type="submit" name ="button_pressed" value="Submit">
-    <?php
-    if(isset($_POST['button_pressed'])) {
-   	/* Setup your Subject and Message Body */ 
-   	$subject='Testing php Email'; 
-	$body=' Put Your Text Message Here.'; 
-
-  	/* Specify your SMTP Server, Port and Valid From Address */ 
-  	ini_set("SMTP","lisna.vargheese@gmail.com"); 
-  	ini_set("smtp_port","25"); 
-  	ini_set("sendmail_from","lisna.vargheese@gmail.com"); 
- 
-  	$headers = "Cc:Real CC Name <cclisna.vargheese@gmail.com>\r\n"; 
-  	$headers .= "Bcc:Real BCC Name <bcclisna.vargheese@gmail.com>\r\n"; 
-
- 	 /* Try to send message and respond if it sends or fails. */ 
- 	if(mail ('Lisna V <lisna.vargheese@gmail.com>', $subject, $body, $headers )){ 
-     	echo "<h2>Your Message was sent!</h2>"; 
- 	} 
-	else { 
-     	echo "<font color='red'><h2>Your Message Was Not Sent!</h2></font>"; 
-	} 
-	exit; 
-    }
-    ?> </a>
+    <center><form method="post" action="contact.php">
+    <textarea name="message"></textarea>
+    <input type="submit">
+    </form>
+    <a class = 'button' href = 'success.html'><input type='submit' value='Submit!'/></a>
     </center></div>
-    </div>    
+
 </div>
 </body>
+</html>
