@@ -19,11 +19,22 @@
         }
         </style>
 	<div class = "row">
-		<div class="col-sm-4"><center><a href="search.html"><input type="image" src="searchButton2.svg" alt="Search" width="281" height="188"></a></center></div>
+		<div class="col-sm-4"><center><a href="search.html"><input onmouseover="bigImg(this)" onmouseout="normalImg(this)" type="image" src="searchButton2.svg" alt="Search" width="281" height="188"></a></center></div>
         <div class="col-sm-4">
-        	<center><a href="explore.html"><input type="image" src="exploreButton2.svg" alt="explore" width="281" height="188"></a></center>
+        	<center><a href="explore.html"><input onmouseover="bigImg(this)" onmouseout="normalImg(this)" type="image" src="exploreButton2.svg" alt="explore" width="281" height="188"></a></center>
         </div>
-        <div class="col-sm-4"><center><a href = "http://www.123contactform.com/form-2681686/Awake-In-Atlanta"><input type="image" src="submitButton2.svg" alt="Submit" width="281" height="188"></a></center></div>
+        <div class="col-sm-4"><center><a href = "http://www.123contactform.com/form-2681686/Awake-In-Atlanta"><input onmouseover="bigImg(this)" onmouseout="normalImg(this)" type="image" src="submitButton2.svg" alt="Submit" width="281" height="188"></a></center></div>
     </div>
 </div>
+	<script>
+	function bigImg(x) {
+    		x.style.height = "235px";
+    		x.style.width = "351.25px";
+	}
+
+	function normalImg(x) {
+    		x.style.height = "188px";
+   		x.style.width = "281px";
+	}
+</script>
 </body>
