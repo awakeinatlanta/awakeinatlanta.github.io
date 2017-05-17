@@ -1,8 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
 <title>Awake In Atlanta</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="style.css">
 
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -11,11 +12,11 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <body>
 <div class="container">
-       <center><a href="index.html"><h1><img src="titlePic.png" width="786" height="70"></h1></center>
+       <a href="index.html"><center><h1><img src="titlePic.png" width="786" height="70"></h1></center>
         <style>
         h1 {
             padding-top: 20px;
-            padding-bottom: 110px;
+            padding-bottom: 75px;
         }
     </style></a>
     <div class = "row">
@@ -25,15 +26,23 @@
     </div>
 
     <div class = "row">
-    <center><form>
-        Coffee Shop Name:<br>
-        <input type="text" name="coffeeshop">
-        <br>
-        Address:<br>
-        <input type="text" name="address">
-        <br><br>
-        </form> 
-        <a href = "success.html" ><input type="submit" value="Submit"></a>
+        <center>
+        <div class="container">
+        <div class="frame">
+            <div class="nav">
+        </div>
+        <div ng-app ng-init="checked = false">
+            <form class="form-signin" href = "success.html" action="https://formspree.io/lisna.vargheese@gmail.com" method="POST" name="form">
+            Coffee Place:<br>
+            <input type="text" name="name" value="">
+            <br>
+            Address:<br>
+            <input type="text" name="address" value="">
+            <br><br>
+            <input type="submit" value="Submit">
+          </form>         
+    </div></center>
+        
     </center></div>
 
 </div>
